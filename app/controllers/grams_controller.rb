@@ -1,5 +1,6 @@
 class GramsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  
 
   def index
     @grams = Gram.all
@@ -7,6 +8,7 @@ class GramsController < ApplicationController
 
   def new
     @gram = Gram.new
+    
   end
 
   def create
